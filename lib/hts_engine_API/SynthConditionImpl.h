@@ -74,6 +74,8 @@ public:
    //! unset waveform buffer
    void unsetWaveformBuffer();
 
+	   //! set use World
+   void setUseWorld(bool use);
 
 private:
    //! copy constructor (donot use)
@@ -92,6 +94,8 @@ private:
    std::vector<double>* waveformBuffer;
 
    friend class HtsEngine;
+
+   bool useWorld = false;
 };
 
 };

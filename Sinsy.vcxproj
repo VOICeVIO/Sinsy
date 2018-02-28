@@ -65,7 +65,7 @@
   <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)\include;$(SolutionDir)\lib\xml;$(SolutionDir)\lib\util;$(SolutionDir)\lib\temporary;$(SolutionDir)\lib\score;$(SolutionDir)\lib\converter;$(SolutionDir)\lib\japanese;$(SolutionDir)\lib\label;$(SolutionDir)\lib\hts_engine_API;$(SolutionDir)\lib\hts_engine_API-1.10;$(SolutionDir)\lib\hts_engine_API-1.10\include;$(SolutionDir)\lib\hts_engine_API-1.10\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;$(SolutionDir)\lib\xml;$(SolutionDir)\lib\util;$(SolutionDir)\lib\temporary;$(SolutionDir)\lib\score;$(SolutionDir)\lib\converter;$(SolutionDir)\lib\japanese;$(SolutionDir)\lib\label;$(SolutionDir)\lib\hts_engine_API;$(SolutionDir)\hts_engine_API;$(SolutionDir)\hts_engine_API\World\src;$(SolutionDir)\hts_engine_API\SPTK\include;$(SolutionDir)\hts_engine_API\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -74,21 +74,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bin\sinsy-console.cpp" />
+    <ClCompile Include="hts_engine_API\lib\WORLD_vocoder.c" />
     <ClCompile Include="lib\converter\ConfGroup.cpp" />
     <ClCompile Include="lib\converter\ConfManager.cpp" />
     <ClCompile Include="lib\converter\Converter.cpp" />
     <ClCompile Include="lib\converter\PhonemeInfo.cpp" />
     <ClCompile Include="lib\converter\UnknownConf.cpp" />
     <ClCompile Include="lib\converter\util_converter.cpp" />
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_audio.c" />
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_engine.c" />
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_gstream.c" />
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_label.c" />
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_misc.c" />
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_model.c" />
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_pstream.c" />
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_sstream.c" />
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_vocoder.c" />
+    <ClCompile Include="hts_engine_API\lib\HTS_audio.c" />
+    <ClCompile Include="hts_engine_API\lib\HTS_engine.c" />
+    <ClCompile Include="hts_engine_API\lib\HTS_gstream.c" />
+    <ClCompile Include="hts_engine_API\lib\HTS_label.c" />
+    <ClCompile Include="hts_engine_API\lib\HTS_misc.c" />
+    <ClCompile Include="hts_engine_API\lib\HTS_model.c" />
+    <ClCompile Include="hts_engine_API\lib\HTS_pstream.c" />
+    <ClCompile Include="hts_engine_API\lib\HTS_sstream.c" />
+    <ClCompile Include="hts_engine_API\lib\HTS_vocoder.c" />
     <ClCompile Include="lib\hts_engine_API\HtsEngine.cpp" />
     <ClCompile Include="lib\hts_engine_API\SynthConditionImpl.cpp" />
     <ClCompile Include="lib\japanese\JConf.cpp" />
@@ -140,8 +141,8 @@
     <ClInclude Include="lib\converter\PhonemeInfo.h" />
     <ClInclude Include="lib\converter\UnknownConf.h" />
     <ClInclude Include="lib\converter\util_converter.h" />
-    <ClInclude Include="lib\hts_engine_API-1.10\include\HTS_engine.h" />
-    <ClInclude Include="lib\hts_engine_API-1.10\lib\HTS_hidden.h" />
+    <ClInclude Include="hts_engine_API\include\HTS_engine.h" />
+    <ClInclude Include="hts_engine_API\lib\HTS_hidden.h" />
     <ClInclude Include="lib\hts_engine_API\HtsEngine.h" />
     <ClInclude Include="lib\hts_engine_API\SynthConditionImpl.h" />
     <ClInclude Include="lib\japanese\JConf.h" />

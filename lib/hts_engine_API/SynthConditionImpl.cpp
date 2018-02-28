@@ -109,5 +109,8 @@ void SynthConditionImpl::unsetWaveformBuffer()
    this->waveformBuffer = NULL;
 }
 
-
+	void SynthConditionImpl::setUseWorld(bool use)
+	{
+		this->useWorld = use;
+	}
 };  // namespace sinsy

@@ -222,10 +222,10 @@
     <ClInclude Include="include\sinsy.h">
       <Filter>bin</Filter>
     </ClInclude>
-    <ClInclude Include="lib\hts_engine_API-1.10\lib\HTS_hidden.h">
+    <ClInclude Include="hts_engine_API\include\HTS_engine.h">
       <Filter>hts</Filter>
     </ClInclude>
-    <ClInclude Include="lib\hts_engine_API-1.10\include\HTS_engine.h">
+    <ClInclude Include="hts_engine_API\lib\HTS_hidden.h">
       <Filter>hts</Filter>
     </ClInclude>
   </ItemGroup>
@@ -365,35 +365,39 @@
     <ClCompile Include="lib\util\util_string.cpp">
       <Filter>util</Filter>
     </ClCompile>
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_audio.c">
-      <Filter>hts</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_engine.c">
-      <Filter>hts</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_gstream.c">
-      <Filter>hts</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_label.c">
-      <Filter>hts</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_misc.c">
-      <Filter>hts</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_model.c">
-      <Filter>hts</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_pstream.c">
-      <Filter>hts</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_sstream.c">
-      <Filter>hts</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\hts_engine_API-1.10\lib\HTS_vocoder.c">
-      <Filter>hts</Filter>
-    </ClCompile>
     <ClCompile Include="bin\sinsy-console.cpp">
       <Filter>bin</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Sinsy.cpp" />
+    <ClCompile Include="hts_engine_API\lib\HTS_audio.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\lib\HTS_engine.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\lib\HTS_gstream.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\lib\HTS_label.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\lib\HTS_misc.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\lib\HTS_model.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\lib\HTS_pstream.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\lib\HTS_sstream.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\lib\HTS_vocoder.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\lib\WORLD_vocoder.c">
+      <Filter>hts</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
