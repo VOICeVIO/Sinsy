@@ -1,0 +1,3 @@
+[submodule "hts_engine_API"]
+	path = hts_engine_API
+	url = https://github.com/yamachu/hts_engine_API
