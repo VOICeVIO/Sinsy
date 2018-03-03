@@ -408,9 +408,9 @@ namespace sinsy
 		this->impl->unsetWaveformBuffer();
 	}
 
-	void SynthCondition::setUseWorld(bool use)
+	void SynthCondition::setVocoder(int vocoder)
 	{
-		this->impl->setUseWorld(use);
+		this->impl->setVocoder(vocoder);
 	}
 
 

@@ -156,8 +156,8 @@ namespace sinsy
 		//! unset waveform buffer
 		void unsetWaveformBuffer();
 
-		//! set use World
-		void setUseWorld(bool use);
+		//! set Vocoder: 1 = World; 2 = MGC; other = HTS
+		void setVocoder(int vocoder);
 
 
 	private:

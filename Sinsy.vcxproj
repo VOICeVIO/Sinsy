@@ -130,6 +130,8 @@
     <ClCompile Include="lib\xml\XmlParser.cpp" />
     <ClCompile Include="lib\xml\XmlReader.cpp" />
     <ClCompile Include="lib\xml\XmlWriter.cpp" />
+    <ClCompile Include="hts_engine_API\MGCVocoder\MGC_Vocoder.c" />
+    <ClCompile Include="hts_engine_API\MGCVocoder\MGC_Synthesizer.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\sinsy.h" />
@@ -197,6 +199,8 @@
     <ClInclude Include="lib\xml\XmlReader.h" />
     <ClInclude Include="lib\xml\XmlWriter.h" />
     <ClInclude Include="lib\xml\xml_tags.h" />
+    <ClInclude Include="hts_engine_API\MGCVocoder\MGC_Vocoder.h" />
+    <ClInclude Include="hts_engine_API\MGCVocoder\MGC_Synthesizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

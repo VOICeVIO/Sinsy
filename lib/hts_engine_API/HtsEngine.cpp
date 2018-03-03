@@ -48,6 +48,7 @@
 #include "HtsEngine.h"
 #include "LabelStrings.h"
 #include "SynthConditionImpl.h"
+#include "HTS_engine.h"
 
 namespace sinsy
 {
@@ -179,9 +180,15 @@ namespace sinsy
 
 		int error = 0; // 0: no error 1: unknown error 2: bad alloc
 
-		if (condition.useWorld)
+		if (condition.vocoder == 1)
 		{
 			if (HTS_Engine_synthesize_from_strings_WORLD(&engine, (char**)label.getData(), label.size()) != TRUE) {
+				error = 1;
+			}
+		}
+		else if (condition.vocoder == 2)
+		{
+			if (HTS_Engine_synthesize_from_strings_MGC(&engine, (char**)label.getData(), label.size()) != TRUE) {
 				error = 1;
 			}
 		}

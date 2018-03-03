@@ -74,8 +74,8 @@ public:
    //! unset waveform buffer
    void unsetWaveformBuffer();
 
-	   //! set use World
-   void setUseWorld(bool use);
+	   //! set Vocoder : 1 = World; 2 = MGC; other = HTS
+   void setVocoder(int vocoder);
 
 private:
    //! copy constructor (donot use)
@@ -95,7 +95,7 @@ private:
 
    friend class HtsEngine;
 
-   bool useWorld = false;
+   int vocoder = 0;
 };
 
 };

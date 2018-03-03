@@ -59,7 +59,7 @@ void usage()
 	std::cout << "" << std::endl;
 	std::cout << "The HMM-Based Speech Synthesis Engine \"hts_engine API\"" << std::endl;
 	std::cout << "Version 1.10 (http://hts-engine.sourceforge.net/)" << std::endl;
-	std::cout << "Copyright (C) 2018 Yusuke Yamada (yamachu) & UlyssesWu" << std::endl;
+	std::cout << "Copyright (C) 2018 Yusuke Yamada (yamachu) & XingYu Na & Ulysses Wu" << std::endl;
 	std::cout << "Copyright (C) 2001-2015 Nagoya Institute of Technology" << std::endl;
 	std::cout << "              2001-2008 Tokyo Institute of Technology" << std::endl;
 	std::cout << "All rights reserved." << std::endl;
@@ -74,7 +74,7 @@ void usage()
 	std::cout << "                  (Currently, you can set only Japanese)  " << std::endl;
 	std::cout << "    -x dir      : dictionary directory               [N/A]" << std::endl;
 	std::cout << "    -m htsvoice : HTS voice file                     [N/A]" << std::endl;
-	std::cout << "    -d          : Use WORLD Vocoder                  [  N]" << std::endl;
+	std::cout << "    -v          : set Vocoder (w:WORLD, m:MGC, h:HTS)[  h]" << std::endl;
 	std::cout << "    -o file     : filename of output wav audio       [N/A]" << std::endl;
 	std::cout << "  infile:" << std::endl;
 	std::cout << "    MusicXML file" << std::endl;
@@ -92,7 +92,7 @@ int main(int argc, char **argv)
 	std::string config;
 	std::string wav;
 	std::string languages(DEFAULT_LANGS);
-	bool useWorld = false;
+	int vocoder = 0;
 
 	int i(1);
 	for (; i < argc; ++i) {
@@ -107,6 +107,7 @@ int main(int argc, char **argv)
 			}
 		}
 		else {
+			char voc;
 			switch (argv[i][1]) {
 			case 'w':
 				languages = argv[++i];
@@ -120,8 +121,17 @@ int main(int argc, char **argv)
 			case 'o':
 				wav = argv[++i];
 				break;
-			case 'd':
-				useWorld = true;
+			case 'v':
+				voc = argv[++i][0];
+				if (voc == 'w')
+				{
+					vocoder = 1;
+				}
+				else if (voc == 'm')
+				{
+					vocoder = 2;
+				}
+				else { vocoder = 0; }
 				break;
 			case 'h':
 				usage();
@@ -168,10 +178,7 @@ int main(int argc, char **argv)
 		condition.setSaveFilePath(wav);
 	}
 
-	if (useWorld)
-	{
-		condition.setUseWorld(true);
-	}
+	condition.setVocoder(vocoder);
 
 	sinsy.synthesize(condition);
 

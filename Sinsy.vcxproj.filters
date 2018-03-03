@@ -228,6 +228,12 @@
     <ClInclude Include="hts_engine_API\lib\HTS_hidden.h">
       <Filter>hts</Filter>
     </ClInclude>
+    <ClInclude Include="hts_engine_API\MGCVocoder\MGC_Synthesizer.h">
+      <Filter>hts</Filter>
+    </ClInclude>
+    <ClInclude Include="hts_engine_API\MGCVocoder\MGC_Vocoder.h">
+      <Filter>hts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\xml\XmlData.cpp">
@@ -397,6 +403,12 @@
       <Filter>hts</Filter>
     </ClCompile>
     <ClCompile Include="hts_engine_API\lib\WORLD_vocoder.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\MGCVocoder\MGC_Synthesizer.c">
+      <Filter>hts</Filter>
+    </ClCompile>
+    <ClCompile Include="hts_engine_API\MGCVocoder\MGC_Vocoder.c">
       <Filter>hts</Filter>
     </ClCompile>
   </ItemGroup>
